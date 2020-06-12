@@ -1,0 +1,110 @@
+html {
+    font-family: 'Fira Sans', sans-serif !important;
+}
+
+.row {
+    margin: 0 !important;
+}
+
+h2.title {
+    font-size: 24px !important;
+    letter-spacing: .05em;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400 !important;
+    padding-top: 50px;
+    margin: 0 auto;
+}
+
+/*NAVIGATION BAR*/
+.navbar {
+    height: 91px;
+    background-color: #b71c1c;
+}
+
+.nav-item {
+    text-transform: uppercase;
+    font-size: 13px;
+    margin: -20px;
+    padding: 50px;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+#welcome {
+    background-color: #e9dccd;
+}
+
+.welcome-container {
+    padding-top: 200px;
+    height: 600px;
+}
+
+.phone {
+    text-align: right;
+    margin-top: 50px;
+}
+
+.right {
+    margin-right: 20px !important;
+}
+
+.bottom {
+    margin-bottom: 20px !important;
+}
+
+.about {
+    background-color: rgb(248, 183, 183);
+    height: 500px;
+}
+
+.whatwedo {
+    height: 500px;
+    background-color: rgb(230, 207, 207);
+}
+
+.volun {
+    background-color: #e3bab3;
+    height: 600px;
+    text-align: center;
+}
+
+.shop {
+    background-color: rgb(248, 183, 183);
+    height: 400px;
+}
+
+.col-md-6 {
+    max-width: 50% !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+
+.volunteer-container {
+    margin-top: 20px;
+}
+
+/*----------------------------------
+FOOTER
+-----------------------------------*/
+
+.page-footer {
+    background-color: #4e2a2a ;
+}
+
+.nunukragang {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 400 !important;
+}
+
+p {
+    color: white;
+}
