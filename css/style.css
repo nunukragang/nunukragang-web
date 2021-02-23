@@ -1,26 +1,26 @@
 * {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-  
+
 body {
   font-family: "Raleway", sans-serif;
   color: #161616 !important;
 }
-    
+  
 a {
-  color: #D13636;
-  text-decoration: none;
+  color: #800000;
+  text-decoration: none !important;
 }
-    
+  
 a:hover {
-  color: #000000;
+  color: #689775;
   text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif !important;
 }
-    
+  
 /* ===== HEADER ===== */
 #header {
   background: #ffffff;
@@ -30,43 +30,44 @@ h1, h2, h3, h4, h5, h6 {
   top: 0px;
   position: fixed;
 }
-    
+ 
 #header .logo {
   font-size: 25px;
-  margin: 0;
-  padding: 0;
-  letter-spacing: 0px;
   text-transform: uppercase;
   font-family: "Playfair Display", serif;
   font-style: none;
 }
-    
+  
 #header .logo a {
-  color: #C42929;
+  color: #800000;
   text-decoration: none;
 }
-  
+
 #header .logo a:hover {
   text-decoration: none;
 }
-  
+
+#header .logo img {
+  max-height: 40px;
+}
+
 /* ===== NAVIGATION BAR ===== */
 .nav-menu ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-    
+  
 .nav-menu > ul {
   display: flex;
 }
-    
+  
 .nav-menu > ul > li {
   position: relative;
   white-space: normal;
   padding: 10px 0 10px 28px;
 }
-    
+  
 .nav-menu a {
   display: block;
   position: relative;
@@ -76,40 +77,53 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
   text-transform: none;
 }
-    
+  
 .nav-menu a:hover {
   color: #689775;
   text-decoration: none;
 }
 
 /* ===== WELCOME ===== */
-    
+  
 #welcome {
+  position: relative;
   width: 100%;
   height: 80vh;
-  background: #f3f3f3;
+  background: #ffffff;
 }
-    
+
+#welcome::before {
+  content: "";
+  background-image: url(/images/banner1.png);
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.15;
+}
+  
 #welcome .container {
   padding-top: 50px;
 }
-    
+  
 #welcome h1 {
   font-family: 'Playfair Display', serif;
   font-size: 45px;
   line-height: 58px;
-  color: #161616;
+  color: #131313;
   text-transform: uppercase;
 }
-    
+  
 #welcome h2 {
   font-family: 'Raleway', sans-serif !important;
-  color: #3b3b3b;
-  margin: 10px 0 0 0;
+  color: #494949;
+  margin: 10px 0 10px 0;
   font-size: 20px;
   line-height: 30px;
 }
-    
+
 #welcome .button {
   font-family: "Raleway", sans-serif;
   font-size: 14px;
@@ -117,194 +131,110 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   padding: 8px 28px;
   border-radius: 6px;
-  transition: 0.5s;
-  margin-top: 25px;
+  transition: 0.4s;
+  margin: 10px 0 0 0;
   color: #ffffff;
-  background: #C42929;
+  background: #800000;
   text-transform: uppercase;
   text-decoration: none;
 }
-    
+  
 #welcome .button:hover {
   background: #689775;
 }
 
-
 /* Mobile view */
 @media only screen and (max-width: 600px) {
   #welcome {
+    padding: 10px;
     height: 80vh;
     text-align: center;
   }
 
   #welcome h1 {
-    font-size: 25px;
+    font-size: 30px;
     line-height: 35px;
   }
 
   #welcome h2 {
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 18px;
+    line-height: 28px;
   }
 
   #welcome .button {
     font-size: 12px;
   }
 }
-    
-/* ===== SECTION ===== */
+  
+/* ===== SECTIONS ===== */
 section {
   width: 100%;
-  padding: 60px 0 0;
+  padding: 60px;
 }
-    
+  
 .section-bg {
   background-color: #f3f3f3;
 }
-    
+  
 .section-title {
   font-family: 'Playfair Display', serif;
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   line-height: 30px;
 }
-    
+  
 .section-title h2 {
   font-size: 35px;
   font-weight: 900;
   text-transform: none;
-  margin-bottom: 20px;
-  padding-bottom: 0;
-  letter-spacing: 2px;
-  color: #C42929;
+  padding-bottom: 20px;
+  color: #800000;
 }
-  
+
 .section-title h3 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   text-transform: none;
-  margin-bottom: 20px;
-  padding-bottom: 0;
-  letter-spacing: 2px;
+  padding-bottom: 20px;
   color: #689775;
 }
-    
+  
 .section-title p {
-    font-family: 'Raleway', sans-serif;
-    margin-bottom: 0;
-  }
-
-  @media only screen and (max-width: 600px) {
-    .section-title h2 {
-      font-size: 22px;
-    }
-  }
-    
-  /* ===== CONTACT FORM ===== */
-    
-.contact .cform {
-  width: 100%;
-  background: #f3f3f3;
-}
-    
-.contact .cform .form-group {
-  padding-bottom: 2px;
-}
-    
-.contact .cform input, .contact .cform textarea {
-  box-shadow: none;
-  font-size: 14px;
-  border-radius: 6px;
-}
-    
-.contact .cform input {
-  height: 44px;
-}
-    
-.contact .cform textarea {
-  padding: 5px 6px;
-}
-    
-.contact .cform button[type="submit"] {
   font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
-  background: #C42929;
-  border: 0;
-  padding: 8px 20px;
-  color: #ffffff;
-  transition: 0.4s;
-  border-radius: 4px;
-  font-size: 14px;
 }
     
-.contact .cform button[type="submit"]:hover {
-  background: #689775;
-  cursor: pointer;
-}
-    
-/* ===== FOOTER ===== */
-#footer {
-  font-size: 15px;
-  background: #C42929;
-}
-  
-#footer .copyright {
-  text-align-last: center;
-  font-family: 'Raleway', sans-serif;
-  font-size: 16px;
-  color: #ffffff;
-}
-    
-#footer .footer-top {
-  padding: 60px 0 30px 0;
-  background: #f3f3f3;
-  color: #161616;
-}
-    
-#footer .footer-top p {
-  font-size: 15px;
-  font-weight: bold;
-  line-height: 24px;
-  margin-bottom: 0;
-  font-family: "Raleway", sans-serif;
-  color: #000000;
-}
-  
-#footer .footer-top h4 {
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 1px;
-  font-size: 20px;
-  font-weight: 900;
-  color: #161616;
-  position: relative;
-  padding-bottom: 12px;
-}
-    
-#footer .footer-top .footer-link {
-  margin-bottom: 30px;
-}
-    
-#footer .footer-top .footer-link ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-    
-#footer .footer-top .footer-link ul li {
-  padding: 10px 0;
+.section-title ul li {
+  padding: 0 0 15px 0;
   display: flex;
   align-items: center;
 }
     
-#footer .footer-top .footer-link ul a {
-  color: #C42929;
+.section-title a {
+  color: #161616;
   transition: 0.4s;
-  display: inline-block;
-  line-height: 1;
   font-family: "Raleway", sans-serif !important;
 }
     
-#footer .footer-top .footer-link ul a:hover {
+.section-title a:hover {
   color: #689775;
   text-decoration: none;
+}
+
+/* Mobile view */
+@media only screen and (max-width: 600px) {
+  .section-title h2 {
+    font-size: 22px;
+  }
+}
+
+/* ===== FOOTER ===== */
+#footer {
+  background: #800000;
+}
+
+#footer .copyright {
+  text-align-last: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: #ffffff;
 }

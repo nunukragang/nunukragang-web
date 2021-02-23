@@ -13,6 +13,7 @@
 
   <!-- BOOTSTRAP -->
   <link href="css/style.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/5.0.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -25,7 +26,8 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">Nunukragang</a></h1>
+      <a href="index.html" class="logo mr-auto"><img src="images/logo.png" alt="" class="img-fluid"></a>
+      <!-- <h1 class="logo mr-auto"><a href="index.html">Nunukragang</a></h1> -->
 
       <!-- NAVIGATION BAR -->
       <nav class="nav-menu d-none d-lg-block">
@@ -34,8 +36,6 @@
           <li><a href="#about">About</a></li>
           <li><a href="#whatwedo">What We Do</a></li>
           <li><a href="#volunteer">Volunteer</a></li>
-          <li><a href="#shop">Shop</a></li>
-          <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -46,7 +46,7 @@
   <section id="welcome" class="d-flex align-items-center">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-end">
+        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 d-flex flex-column">
           <h1>Welcome to Nunukragang</h1>
           <h2>In the age of old, two rivers flowed into one; the Labuk River. From the river, the tree of life sprang forth with the beginning of a civilisation.</h2>
           <div><a href="#about" class="button">Learn More</a></div>
@@ -68,12 +68,12 @@
         </div>
 
         <div class="row align-items-end">
-          <div class="col-md-4 text-lg-left section-title">
+          <div class="col-md-4 align-self-start text-lg-left section-title">
             <h3>Our Mission</h3>
             <p>is to bring youths and adults alike to pitch in and build an online dictionary for indigenous languages in Sabah. We want to foster the community and reignite their passion for the traditional heritage.</p>
           </div>
           
-          <div class="col-md-4 offset-md-4 text-lg-left section-title">
+          <div class="col-md-4 offset-md-4 align-self-start text-lg-left section-title">
             <h3>Our Vision</h3>
             <p>is to provide a digital outlet on indigenous language accessible to everyone, anytime, everywhere in the world. A means to connect home, even if you’re far away.</p>
           </div>
@@ -106,69 +106,40 @@
       </div>
     </section>
 
-    <!-- SHOP SECTION-->
-    <section id="shop" class="section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Shop</h2>
-          <p>Paragraph goes here.</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- GALLERY SECTION -->
-    <section id="gallery">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Gallery</h2>
-          <p>Paragraph goes here.</p>
-        </div>
-
-      </div>
-    </section>
-
     <!-- CONTACT SECTION -->
     <section id="contact" class="contact section-bg">
       <div class="container">
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>Paragraph goes here.</p>
+          <p>Want to know more about us or drop by to say hello? Feel free to get in touch with us!</p>
         </div>
 
-        <!-- GOOGLE MAP -->
         <div class="row">
-        	<div class="col-lg-4 mt-5 mt-lg-0">
-		        <div>
-		          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.142231456079!2d116.0699712147054!3d5.975143630952624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x323b69fbc075f7cf%3A0x852da13586a1e847!2sPhi%20Software%20Sdn%20Bhd!5e0!3m2!1sen!2smy!4v1613398713323!5m2!1sen!2smy" width="100%" height="230px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-		        </div>
-	    	</div>
+            <div class="col-lg-6 align-self-start text-lg-left section-title">
+              <h3>Location</h3>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.142231456079!2d116.0699712147054!3d5.975143630952624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x323b69fbc075f7cf%3A0x852da13586a1e847!2sPhi%20Software%20Sdn%20Bhd!5e0!3m2!1sen!2smy!4v1613398713323!5m2!1sen!2smy" width="100%" height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
 
-        <!-- FORM, for display only. Doesn't actually work. -->
-          <div class="col-lg-8 mt-5 mt-lg-0">
-            <form action="#" role="form" class="cform">
-              <div class="form-row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Name" />
-                </div>
-                <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" />
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" />
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
-              </div>
-              <div class="text-center"><button type="submit">Submit</button></div>
-            </form>
+            <div class="col-lg-4 align-self-end text-lg-left section-title">
+              <p>
+                L-96 Linked Bridge, Star City<br>
+                88000 Kota Kinabalu, Sabah<br>
+                Malaysia<br><br>
+                <b>Telegram:</b> +60 12 345 6789<br>
+                <b>Email:</b> info@nunukragang.org<br>
+              </p>
+            </div>
 
-          </div>
-
+            <div class="col-lg-2 align-self-start text-lg-left section-title">
+              <h3>Social Media</h3>
+              <p>
+                <a href="https://www.facebook.com/nunukragangproject/" title="Facebook"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>  
+                <a href="https://www.instagram.com/nunukragangproject/" title="Instagram"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>  
+                <a href="https://www.twitter.com/nunukragangproject/" title="Twitter"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a>  
+              </p>
+            </div>
+          
         </div>
 
       </div>
@@ -179,50 +150,12 @@
   <!-- FOOTER -->
   <footer id="footer">
 
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-6 col-md-9 footer-link">
-            <h4>Nunukragang</h4>
-            <p>
-              L-96 Linked Bridge, Star City<br>
-              88000 Kota Kinabalu, Sabah<br>
-              Malaysia<br><br>
-              <strong>Phone:</strong> +60 88 123456<br>
-              <strong>Email:</strong> contact@hello.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-link">
-            <h4>Links</h4>
-            <ul>
-              <li><a href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
-              <li><a href="#">Link 3</a></li>
-              <li><a href="#">Link 4</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-link">
-            <h4>Our Social Media</h4>
-            <ul>
-              <li><a href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
-              <li><a href="#">Link 3</a></li>
-              <li><a href="#">Link 4</a></li>
-          </ul>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
     <div class="container py-3">
       <div class="copyright">
         &copy; 2021 <strong><span>NUNUKRAGANG</span></strong>
       </div>
     </div>
+
   </footer>
 
 </body>
