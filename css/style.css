@@ -229,11 +229,11 @@ section {
 
 /* ===== FOOTER ===== */
 #footer {
+  text-align: center;
   background: #800000;
 }
 
 #footer .copyright {
-  text-align-last: center;
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
   color: #ffffff;
