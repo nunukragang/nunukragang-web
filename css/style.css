@@ -1,3 +1,8 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -18,6 +23,16 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6, p {
   font-family: 'Raleway', sans-serif !important;
+}
+
+section {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100% !important;
+
 }
   
 /* ===== HEADER ===== */
@@ -73,6 +88,7 @@ h1, h2, h3, h4, h5, h6, p {
   width: 100%;
   height: 80vh;
   background: #ffffff;
+  padding: 0;
 }
 
 #welcome::before {
@@ -84,11 +100,7 @@ h1, h2, h3, h4, h5, h6, p {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.2;
-}
-  
-#welcome .container {
-  padding-top: 70px;
+  opacity: 0.3;
 }
   
 #welcome h1 {
@@ -132,17 +144,19 @@ h1, h2, h3, h4, h5, h6, p {
   background: #af0000;
 }
 
-#welcome .overlay {
-  background: rgba(255, 255, 255, 0.7);
-  padding-bottom: 30px;
-  z-index: 2;
-  display: inline-block;
+.overlay {
+  position: relative;
+  background: rgba(255, 255, 255, 0.6);
+  padding-top: 30px;
+  padding-bottom: 60px;
+  z-index: 5;
+  display: block;
+  width: 100%;
 }
 
 /* Mobile view*/
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1025px) {
   #welcome {
-    padding: 10px;
     text-align: center;
   }
 
@@ -152,6 +166,10 @@ h1, h2, h3, h4, h5, h6, p {
     margin-top: 20px;
   }
 
+  .overlay {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
 }
   
 /* ===== SECTIONS ===== */
@@ -231,7 +249,7 @@ section {
 }
 
 /* Mobile view */
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1025px) {
 
   .section-title h3, .section-title p, .section-title #lead, .section-title #contact {
     text-align: center !important;
