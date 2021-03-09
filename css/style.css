@@ -1,8 +1,3 @@
-* {
-  margin: 0px;
-  padding: 0px;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -40,7 +35,7 @@ section {
   background: #ffffff;
   transition: all 0.5s;
   z-index: 999;
-  padding: 18px 0;
+  padding: 10px 100px 10px 100px;
   position: fixed;
   box-shadow: 0 4px 6px 0  hsla(0, 0%, 0%, 0.1);
 }
@@ -50,23 +45,23 @@ section {
 }
 
 /* ===== NAVIGATION BAR ===== */
-.nav-menu ul {
+.navbar-nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
   
-.nav-menu > ul {
+.navbar-nav > ul {
   display: flex;
 }
   
-.nav-menu > ul > li {
+.navbar-nav > ul > li {
   position: relative;
   white-space: normal;
   padding: 10px 0 10px 30px;
 }
   
-.nav-menu a {
+.navbar-nav a {
   display: block;
   position: relative;
   color: #161616;
@@ -75,12 +70,19 @@ section {
   font-family: "Raleway", sans-serif;
   text-transform: none;
   font-weight: 400;
+  margin-right: 20px;
 }
   
-.nav-menu a:hover {
+.navbar-nav a:hover {
   color: #af0000;
   text-decoration: none;
 }
+
+.navbar, .navbar-toggler {
+  border: none !important;
+  color: #161616 !important;
+}
+
 
 /* ===== WELCOME ===== */
 #welcome {
@@ -89,6 +91,7 @@ section {
   height: 80vh;
   background: #ffffff;
   padding: 0;
+  margin-top: 50px;
 }
 
 #welcome::before {
@@ -149,15 +152,20 @@ section {
   background: rgba(255, 255, 255, 0.6);
   padding-top: 30px;
   padding-bottom: 60px;
-  z-index: 5;
+  z-index: 1;
   display: block;
   width: 100%;
 }
 
-/* Mobile view*/
+/* Mobile view */
 @media only screen and (max-width: 1025px) {
+  #header {
+    padding: 0;
+  }
+
   #welcome {
     text-align: center;
+    margin-top: 60px;
   }
 
   #welcome h1 {
@@ -169,6 +177,11 @@ section {
   .overlay {
     padding-top: 0;
     padding-bottom: 40px;
+  }
+
+  .navbar, .navbar-toggler {
+    border: none !important;
+    color: #161616 !important;
   }
 }
   
