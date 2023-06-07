@@ -120,8 +120,29 @@
           </div>
           
           <div class="col-md-6 align-self-center text-lg-left section-title">
-            <h3>Online Dictionary</h3>
-            <p class="text-left">Users can easily use the dictionary that contains vocabulary from different languages to different translations, all contributed by native speakers.</p>
+            <div class="functions-list">
+              <div class="function">
+                <h4>Online Dictionary</h4>
+                <div class="function-description">
+                  <p>Discover an extensive online dictionary with translations of vocabulary from various languages into Dusun. This reliable resource is built upon contributions from native speakers, ensuring accuracy. Easily find specific words, phrases, or expressions, and enhance your language skills with this user-friendly platform. Deepen your understanding of the language using this powerful tool.</p>
+                </div>
+              </div>
+              
+              <div class="function">
+                <h4>Community Contributions</h4>
+                <div class="function-description">
+                  <p>Join a lively community of language enthusiasts to contribute translations, definitions, and cultural insights. Enrich the dictionary's content and accuracy with your valuable input, reflecting the diverse vocabulary and nuances of language. Together, let's preserve and promote this unique linguistic heritage for future generations.</p>
+                </div>
+              </div>
+              
+              <div class="function">
+                <h4>Multiple Bahasa Option</h4>
+                <div class="function-description">
+                  <p>Explore diverse Dusun dialects like Lotud and Kimaragang, customizing your learning journey. Discover unique vocabulary, expressions, and nuances, immersing yourself in specific dialects through translations, audio pronunciations, and cultural insights. Deepen your understanding of language's rich linguistic heritage and the ethnic diversity of Malaysia.</p>
+                </div>
+              </div>
+            </div>
+            
           </div>
         </div>
 
@@ -206,6 +227,39 @@
     </div>
 
   </footer>
+
+  <script>
+    const functions = document.querySelectorAll('.function');
+    
+    functions.forEach(function (func) {
+      const title = func.querySelector('h4');
+      const description = func.querySelector('.function-description');
+      
+      // Show the description for the Online Dictionary by default
+      if (title.textContent.includes('Online Dictionary')) {
+        description.style.display = 'block';
+        func.classList.add('active');
+      }
+      
+      title.addEventListener('click', function () {
+        // Hide all other descriptions
+        functions.forEach(function (otherFunc) {
+          const otherTitle = otherFunc.querySelector('h4');
+          const otherDescription = otherFunc.querySelector('.function-description');
+          if (otherTitle !== title) {
+            otherDescription.style.display = 'none';
+            otherFunc.classList.remove('active');
+          }
+        });
+        
+        // Toggle the visibility of the clicked description
+        description.style.display = description.style.display === 'none' ? 'block' : 'none';
+        
+        // Toggle the active state
+        func.classList.toggle('active');
+      });
+    });
+  </script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

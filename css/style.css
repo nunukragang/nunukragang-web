@@ -251,6 +251,51 @@ section {
   text-decoration: none;
 }
 
+/* ===== WHAT WE DO ===== */
+
+.functions-list {
+  margin-top: 20px;
+}
+
+.function {
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 10px;
+}
+
+.function:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #d9dddc;
+  transition: background-color 0.3s ease;
+}
+
+.function.active:before {
+  background-color: #800000;
+}
+
+.function h4 {
+  margin: 0;
+  font-weight: bold;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.function-description {
+  display: none;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+.function-description p {
+  margin: 0;
+}
+
+
 /* Cards */
 .card1 {
   border-top: 5px solid #af0000;
