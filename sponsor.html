@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-
+  <script src="https://www.paypal.com/sdk/js?client-id=BAA5UpDa0kvOxOaJdsyKf-obHd_VDpfnAc0YGzo_CWICaFvKgFwRIPu6JWSBOzlioxNMia1mYK3oc715yc&components=hosted-buttons&disable-funding=venmo&currency=MYR"></script>
   <style>
     .sponsor-layout {
       display: grid;
@@ -27,6 +27,33 @@
     .sponsor-note {
       margin-top: 1rem;
       color: var(--muted);
+    }
+
+    .sponsor-rate-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.9rem;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+
+    .sponsor-rate-table th,
+    .sponsor-rate-table td {
+      text-align: left;
+      padding: 0.7rem 0.8rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sponsor-rate-table thead th {
+      background: #fdf2f3;
+      color: #5d1218;
+      font-weight: 700;
+    }
+
+    .sponsor-rate-table tbody tr:last-child td {
+      border-bottom: none;
     }
 
     .sponsor-form-card {
@@ -164,6 +191,38 @@
               <li>Cover operational costs for maintaining the dictionary platform and updates.</li>
             </ul>
 
+            <h3>Sponsorship rates</h3>
+            <table class="sponsor-rate-table" aria-label="Sponsorship rates by total words">
+              <thead>
+                <tr>
+                  <th>Amount</th>
+                  <th>Words</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>RM250</td>
+                  <td>1000</td>
+                </tr>
+                <tr>
+                  <td>RM200</td>
+                  <td>800</td>
+                </tr>
+                <tr>
+                  <td>RM100</td>
+                  <td>400</td>
+                </tr>
+                <tr>
+                  <td>RM50</td>
+                  <td>200</td>
+                </tr>
+                <tr>
+                  <td>RM20</td>
+                  <td>80</td>
+                </tr>
+              </tbody>
+            </table>
+
             <p class="sponsor-note">
               Sponsor names can be displayed on sponsored words as recognition of your contribution.
             </p>
@@ -174,56 +233,12 @@
           </article>
 
           <article class="sponsor-form-card" aria-labelledby="sponsor-form-title">
-            <h2 id="sponsor-form-title">Sponsorship Form</h2>
-
-            <form id="sponsorForm" class="sponsor-form-grid" action="https://www.paypal.com/cgi-bin/webscr" method="post"
-              target="_blank">
-              <input type="hidden" name="cmd" value="_xclick">
-              <input type="hidden" name="business" value="sponsorship@nunukragang.org">
-              <input type="hidden" name="item_name" id="paypalItemName" value="Nunukragang Word Sponsorship">
-              <input type="hidden" name="amount" id="paypalAmount" value="5000.00">
-              <input type="hidden" name="currency_code" value="USD">
-
-              <div class="form-group">
-                <label for="sponsorName">Sponsor name (shown on sponsored words)</label>
-                <input class="form-control" type="text" id="sponsorName" name="sponsorName" required
-                  placeholder="Enter sponsor display name">
-              </div>
-
-              <div class="form-group">
-                <label for="dictionary">Dictionary to sponsor</label>
-                <select class="form-control" id="dictionary" name="dictionary" required>
-                  <option value="">All Dictionary </option>
-                  <option value="Bundu Liwan Dictionary">Bundu Liwan Dictionary</option>
-                  <option value="Sandayo Dictionary">Sandayo Dictionary</option>
-                  <option value="Dusun Dictionary">Dusun Dictionary</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="wordAmount">Amount of word sponsorship</label>
-                <select class="form-control" id="wordAmount" name="wordAmount" required>
-                  <option value="2500">2,500 words</option>
-                  <option value="1000">1,000 words</option>
-                  <option value="500">500 words</option>
-                  <option value="200">200 words</option>
-                <option value="100">100 words</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="remarks">Remarks</label>
-                <textarea class="form-control" id="remarks" name="remarks" rows="4"
-                  placeholder="Optional notes or instructions"></textarea>
-              </div>
-
-              <div class="total-box">
-                Total: <span id="totalDisplay">RM100.00</span>
-              </div>
-
-              <button class="btn btn-primary" type="submit">Pay with PayPal</button>
-              <p class="paypal-help">Total is calculated as words × RM0.50.</p>
-            </form>
+            <div id="paypal-container-2A9MJHSY2ZW5N"></div>
+            <script>
+              paypal.HostedButtons({
+                hostedButtonId: "2A9MJHSY2ZW5N",
+              }).render("#paypal-container-2A9MJHSY2ZW5N")
+            </script>
           </article>
         </div>
       </div>
@@ -242,62 +257,6 @@
       <p>&copy; 2026 Nunukragang Project. All rights reserved.</p>
     </div>
   </footer>
-
-  <script>
-    (function () {
-      const sponsorForm = document.getElementById('sponsorForm');
-      const sponsorName = document.getElementById('sponsorName');
-      const dictionary = document.getElementById('dictionary');
-      const wordAmount = document.getElementById('wordAmount');
-      const remarks = document.getElementById('remarks');
-      const totalDisplay = document.getElementById('totalDisplay');
-      const paypalAmount = document.getElementById('paypalAmount');
-      const paypalItemName = document.getElementById('paypalItemName');
-
-      const ratePerWord = 0.5;
-
-      function formatCurrency(value) {
-        return new Intl.NumberFormat('en-MY', {
-          style: 'currency',
-          currency: 'MYR'
-        }).format(value);
-      }
-
-      function updateTotal() {
-        const words = Number(wordAmount.value);
-        const total = words * ratePerWord;
-        totalDisplay.textContent = formatCurrency(total);
-        paypalAmount.value = total.toFixed(2);
-      }
-
-      function updatePaypalItemName() {
-        const words = Number(wordAmount.value).toLocaleString('en-MY');
-        const name = sponsorName.value.trim() || 'Anonymous Sponsor';
-        const selectedDictionary = dictionary.value;
-        const note = remarks.value.trim();
-        let item = `Nunukragang Sponsorship - ${selectedDictionary} - ${words} words - Sponsor: ${name}`;
-        if (note) item += ` - Remarks: ${note}`;
-        paypalItemName.value = item;
-      }
-
-      wordAmount.addEventListener('change', function () {
-        updateTotal();
-        updatePaypalItemName();
-      });
-
-      sponsorName.addEventListener('input', updatePaypalItemName);
-      dictionary.addEventListener('change', updatePaypalItemName);
-      remarks.addEventListener('input', updatePaypalItemName);
-
-      sponsorForm.addEventListener('submit', function () {
-        updateTotal();
-        updatePaypalItemName();
-      });
-
-      updateTotal();
-      updatePaypalItemName();
-    })();
-  </script>
 </body>
 
 </html>
