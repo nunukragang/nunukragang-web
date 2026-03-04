@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sponsorship | Nunukragang</title>
+  <meta name="description"
+    content="Sponsor Nunukragang dictionary words to support language preservation and help compensate volunteers and moderators.">
+  <meta name="theme-color" content="#6d1620">
+
+  <link rel="canonical" href="https://nunukragang.org/sponsor.html">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    .sponsor-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .sponsor-note {
+      margin-top: 1rem;
+      color: var(--muted);
+    }
+
+    .sponsor-form-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      box-shadow: var(--shadow);
+      padding: 1.25rem;
+    }
+
+    .sponsor-form-grid {
+      display: grid;
+      gap: 0.95rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .form-control {
+      width: 100%;
+      border: 1px solid #d1d5db;
+      border-radius: 0.65rem;
+      padding: 0.7rem 0.8rem;
+      font: inherit;
+      color: var(--text);
+      background: #fff;
+    }
+
+    .form-control:focus {
+      outline: 2px solid rgba(124, 29, 36, 0.2);
+      border-color: var(--primary);
+    }
+
+    .total-box {
+      background: #fdf2f3;
+      border: 1px solid #f5c8ce;
+      border-radius: 0.7rem;
+      padding: 0.75rem 0.85rem;
+      font-weight: 700;
+      color: #5d1218;
+    }
+
+    .paypal-help {
+      margin: 0.45rem 0 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px) {
+      .sponsor-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Nunukragang home">
+        <img src="images/logo.png" width="48" alt="Nunukragang Project logo">
+        <span>Nunukragang</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#what-we-do">What We Do</a></li>
+          <li><a href="sponsor.html" aria-current="page">Sponsorship</a></li>
+          <li><a href="index.html#volunteer">Volunteer</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h1>Sponsor Nunukragang Project </h1>
+          <p>Your sponsorship supports indigenous language documentation and keeps the work sustainable.</p>
+        </div>
+
+        <div class="sponsor-layout">
+          <article class="card">
+            <h2>What is this sponsorship for?</h2>
+            <p>
+              Nunukragang sponsorship allows individuals and organizations to fund dictionary word entries for endangered
+              and under-documented indigenous languages in Borneo.
+            </p>
+            <p>
+              Sponsored funds are used to support ongoing work such as data collection, translation, review, validation,
+              and dictionary publishing.
+            </p>
+
+            <h3>How we plan to use sponsorship funds</h3>
+            <ul>
+              <li>Provide fair compensation for volunteers who contribute verified word entries.</li>
+              <li>Pay moderators who review spelling, meaning, and cultural context for each entry.</li>
+              <li>Cover operational costs for maintaining the dictionary platform and updates.</li>
+            </ul>
+
+            <p class="sponsor-note">
+              Sponsor names can be displayed on sponsored words as recognition of your contribution.
+            </p>
+          </article>
+
+          <article class="sponsor-form-card" aria-labelledby="sponsor-form-title">
+            <h2 id="sponsor-form-title">Sponsorship Form</h2>
+
+            <form id="sponsorForm" class="sponsor-form-grid" action="https://www.paypal.com/cgi-bin/webscr" method="post"
+              target="_blank">
+              <input type="hidden" name="cmd" value="_xclick">
+              <input type="hidden" name="business" value="sponsorship@nunukragang.org">
+              <input type="hidden" name="item_name" id="paypalItemName" value="Nunukragang Word Sponsorship">
+              <input type="hidden" name="amount" id="paypalAmount" value="5000.00">
+              <input type="hidden" name="currency_code" value="USD">
+
+              <div class="form-group">
+                <label for="sponsorName">Sponsor name (shown on sponsored words)</label>
+                <input class="form-control" type="text" id="sponsorName" name="sponsorName" required
+                  placeholder="Enter sponsor display name">
+              </div>
+
+              <div class="form-group">
+                <label for="dictionary">Dictionary to sponsor</label>
+                <select class="form-control" id="dictionary" name="dictionary" required>
+                  <option value="">All Dictionary </option>
+                  <option value="Bundu Liwan Dictionary">Bundu Liwan Dictionary</option>
+                  <option value="Sandayo Dictionary">Sandayo Dictionary</option>
+                  <option value="Dusun Dictionary">Dusun Dictionary</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="wordAmount">Amount of word sponsorship</label>
+                <select class="form-control" id="wordAmount" name="wordAmount" required>
+                  <option value="10000">10,000 words</option>
+                  <option value="5000">5,000 words</option>
+                  <option value="2500">2,500 words</option>
+                  <option value="1000">1,000 words</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="remarks">Remarks</label>
+                <textarea class="form-control" id="remarks" name="remarks" rows="4"
+                  placeholder="Optional notes or instructions"></textarea>
+              </div>
+
+              <div class="total-box">
+                Total: <span id="totalDisplay">RM100.00</span>
+              </div>
+
+              <button class="btn btn-primary" type="submit">Pay with PayPal</button>
+              <p class="paypal-help">Total is calculated as words × RM0.50.</p>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Nunukragang Project. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const sponsorForm = document.getElementById('sponsorForm');
+      const sponsorName = document.getElementById('sponsorName');
+      const dictionary = document.getElementById('dictionary');
+      const wordAmount = document.getElementById('wordAmount');
+      const remarks = document.getElementById('remarks');
+      const totalDisplay = document.getElementById('totalDisplay');
+      const paypalAmount = document.getElementById('paypalAmount');
+      const paypalItemName = document.getElementById('paypalItemName');
+
+      const ratePerWord = 0.5;
+
+      function formatCurrency(value) {
+        return new Intl.NumberFormat('en-MY', {
+          style: 'currency',
+          currency: 'MYR'
+        }).format(value);
+      }
+
+      function updateTotal() {
+        const words = Number(wordAmount.value);
+        const total = words * ratePerWord;
+        totalDisplay.textContent = formatCurrency(total);
+        paypalAmount.value = total.toFixed(2);
+      }
+
+      function updatePaypalItemName() {
+        const words = Number(wordAmount.value).toLocaleString('en-MY');
+        const name = sponsorName.value.trim() || 'Anonymous Sponsor';
+        const selectedDictionary = dictionary.value;
+        const note = remarks.value.trim();
+        let item = `Nunukragang Sponsorship - ${selectedDictionary} - ${words} words - Sponsor: ${name}`;
+        if (note) item += ` - Remarks: ${note}`;
+        paypalItemName.value = item;
+      }
+
+      wordAmount.addEventListener('change', function () {
+        updateTotal();
+        updatePaypalItemName();
+      });
+
+      sponsorName.addEventListener('input', updatePaypalItemName);
+      dictionary.addEventListener('change', updatePaypalItemName);
+      remarks.addEventListener('input', updatePaypalItemName);
+
+      sponsorForm.addEventListener('submit', function () {
+        updateTotal();
+        updatePaypalItemName();
+      });
+
+      updateTotal();
+      updatePaypalItemName();
+    })();
+  </script>
+</body>
+
+</html>
